@@ -1,0 +1,114 @@
+import java.io.*;
+import java.util.*;
+
+/**
+ * Instructions to candidate.
+ * 1) Given a list of words, group them by anagrams
+ * Input: List of "cat", "dog", "god"
+ * Output: A Set of Sets of anagrams: {{'cat'}, {'dog', 'god'}}
+ * 3) Consider adding some additional tests in doTestsPass().
+ * 4) Implement the AnagramSolution group() method correctly.
+ * 5) If time permits, try to improve your implementation.
+ */
+
+class Solution {
+  /**
+     * A means for grouping words by anagram (same letters irrespective of order)
+     */
+    @FunctionalInterface
+    interface AnagramSolution {
+        Set<Set<String>> group(List<String> words);
+
+
+    }
+
+
+    public static class Test implements AnagramSolution{
+
+       public Set<Set<String>> group(List<String> words) {
+        //tac act
+
+        //cat --- act | dog --- dgo | god -- dgo
+
+        HashMap<String,  Set<String >> hm =  new HashMap<>();
+
+        for(int i=0;i<words.size();i++){
+            String sortedStr = getSortedWord(words.get(i));
+
+          hm.computeIfAbsent(sortedStr, z -> new HashSet<String>()).add(words.get(i));
+            // if(!hm.containsKey(sortedStr)){
+            //   Set<String> res = new HashSet<String>();
+            //   res.add(words.get(i));
+            //   hm.put(sortedStr,res);
+            // }
+            // else{
+            //   hm.get(sortedStr).add(words.get(i));
+            // }
+        }
+
+           // System.out.println(hm);
+
+
+
+
+          return new HashSet<>(hm.values());
+
+
+        }
+
+
+    }
+
+    /*
+    *returns sorted word
+    */
+    public static String getSortedWord(String str){
+      char ch[] = str.toCharArray();
+      Arrays.sort(ch);
+      return new String(ch);
+    }
+
+
+
+
+
+
+
+    /**
+     * public static boolean doTestsPass()
+     * Returns true if all tests pass. Otherwise returns false
+     */
+    public static boolean doTestsPass() {
+        // todo: implement more tests, please
+        // feel free to make testing more elegant
+
+        // given some words
+        List<String> words = Arrays.asList("cat", "dog", "god");
+
+        // todo : and a solution to the problem
+
+        AnagramSolution sol = new Test();
+
+        // when grouped
+        Set<Set<String>> grouped = sol.group(words);
+
+        // we expect god and dog to be identified as anagrams, whilst cat isn't
+        boolean result = true;
+        result = result && grouped.contains(new HashSet<>(Arrays.asList("cat")));
+        result = result && grouped.contains(new HashSet<>(Arrays.asList("dog", "god")));
+        return result;
+    }
+
+
+    /**
+     * Execution entry point.
+     */
+    public static void main(String[] args) {
+        if (doTestsPass()) {
+            System.out.println("All tests pass");
+        } else {
+            System.out.println("There are test failures");
+        }
+
+    }
+}
