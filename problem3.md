@@ -7,45 +7,28 @@ Example:
 nums = [10, 20, 7]
 k = 4
 
-Pick    Pick/2    Ceiling            Initial array 
+*   Pick    Pick/2    Ceiling            Initial array 
 
-7         3.5        4               [ 10, 20, 4]
+*   7         3.5        4               [ 10, 20, 4]
 
-10        5          5               [5, 20, 4]
+*   10        5          5               [5, 20, 4]
 
-20        10         10              [5, 10, 4]
+*   20        10         10              [5, 10, 4]
 
-10        5          5               [5, 5, 4]
+*   10        5          5               [5, 5, 4]
 
 
 The sum of the final array is 5 + 5 + 4 = 14,  and that sum is minimal.
   
 Function Description
-Complete the function minSum in the editor below.
-  
-minSum has the following parameters:
+
+    Complete the function minSum in the editor below.
+    minSum has the following parameters:
         int nums[n]:   an array of integers, indexed 0 to n-1
         int k:   an integer
-Returns
+    Returns
         int:   the minimum sum of the array after k  steps
-  
 Constraints
 * 1 ≤ n ≤ 105
 * 1 ≤ num[i]  ≤ 104  (where  0 ≤ i < n)
 * 1 ≤ k ≤ 2*106
-  
-Input Format For Custom Testing
-  
-Sample Case 0
-Sample Input For Custom Testing
-STDIN        Function
------        --------
-1        →      nums[] size n = 1
-2        →      nums = [2]
-1        →      k = 1
-Sample Output
-1
-Explanation
-  
-In the first operation, the number 2 is reduced to 1.
-Sample Case 1
