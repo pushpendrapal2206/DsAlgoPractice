@@ -86,3 +86,32 @@
     * Find Median from Data Stream
 11. Stack
     * Maximum Frequency Stack
+12. 𝐒𝐭𝐫𝐢𝐧𝐠𝐬:
+    * Discuss: https://lnkd.in/dQU5JJzz
+    * List : https://lnkd.in/dT34eMrA
+13. 𝐓𝐫𝐞𝐞 :
+    * Discuss: https://lnkd.in/dsnQTYZE
+    * List : https://lnkd.in/dk5KEkGN
+14. 𝐆𝐫𝐚𝐩𝐡 :
+    * Discuss: https://lnkd.in/dPPq8Wnb
+    * List: https://lnkd.in/dU3hj3r3
+15. 𝐃𝐲𝐧𝐚𝐦𝐢𝐜 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐢𝐧𝐠 :
+    * Discuss: https://lnkd.in/dXAspRGs
+    * List: https://lnkd.in/d8Zhuvvj
+16. 𝐓𝐫𝐢𝐞:
+    * https://lnkd.in/d_5zxY-Z
+17. 𝐒𝐥𝐢𝐝𝐢𝐧𝐠 𝐖𝐢𝐧𝐝𝐨𝐰:
+    * Discuss: https://lnkd.in/ddAHHCmc
+    * List : https://lnkd.in/dqWSer8F
+18. 𝐆𝐫𝐞𝐞𝐝𝐲 𝐀𝐥𝐠𝐨𝐫𝐢𝐭𝐡𝐦𝐬:
+    * Discuss: https://lnkd.in/dvR9ZeQc
+    * List : https://lnkd.in/dnSrd4mK
+19. 𝐁𝐢𝐧𝐚𝐫𝐲 𝐒𝐞𝐚𝐫𝐜𝐡:
+    * Discuss : https://lnkd.in/dNMafWzH
+    * List: https://lnkd.in/d2fM-iae
+20. 𝐁𝐚𝐜𝐤𝐭𝐫𝐚𝐜𝐤𝐢𝐧𝐠:
+    * Discuss: https://lnkd.in/dcSYXH5M
+    * List: https://lnkd.in/d8UzsHwQ
+21. 𝐏𝐫𝐢𝐨𝐫𝐢𝐭𝐲 𝐐𝐮𝐞𝐮𝐞:
+    * Discuss: https://lnkd.in/dt_6defq
+    * List: https://lnkd.in/dWNJmekA
