@@ -1,0 +1,123 @@
+## Start typing here
+
+Develop an ad-server for an ecommerce app.
+
+In this app there are different pages for different categories of products(Ex: Tshirts, Sarees, Shoes..etc). Whenever a user opens a page, we need to display ad-products belonging to that category. Adserver needs to expose the API for the same.
+
+Adserver should also expose an API for the sellers to create Ads on their products. At the time of Ad creation, seller will specify product he wants to advertise, cost that he is willing to pay for each click(say cost_per_click), budget  and the categories in which he wants to advertise.
+
+Ad serving logic: Whenever a user comes to a category page, serve the ad-product that has the highest cost_per_click in that category. Track the clicks we are receiving on the ad-products and stop serving the ad-product, once the budget has reached.
+
+max 100 ads on single page
+number of ads can be millions
+
+
+Expectations:
+
+HLD
+LLD
+API & DB schemas
+
+
+
+
+Loadbalancer
+
+
+AdsService
+
+POST /v1/ads
+PATCH /v/ads
+GET /v1/ads with pagination
+DELETE /v1/ads inactivate
+
+
+
+
+
+GET /v1/ads?category=?
+POST /v1/ads/{ad_id}/clicks
+
+
+
+
+MySQL
+
+Ads
+ads_id, cost_per_click, budget, create_time, update_time, seller_id, product_id, status
+
+
+
+
+post process ad creation - > kafka -> consumer -< check against alredy calculated data store.
+
+
+message offset
+
+                        task 1 ->  consumer 1
+ ad creation event      task2  ->  consumer 5
+
+
+
+
+
+ads_category
+ads_id, category_id
+
+precompute - > every 5 mins
+
+select * from ads join ads_category where category = ? and budget > num_of_click*cost_per_click order by cost_per_click desc limit 100;
+ads1 .. ads20000
+
+big data store
+
+
+ads_click
+
+
+ad_id key
+{
+    ad_id : ,
+    num_of_clicks :
+}
+partition on the basis of ad_id
+
+
+PL/SQL -> Atomic (precompiled)
+
+
+Redis - >
+catgory_id, ad_id, product_id,
+
+
+
+
+
+
+9:00
+<9:00 AM
+
+
+
+            master1
+
+node1       node3   node4
+
+node2       node5   node6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
