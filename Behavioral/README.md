@@ -11,7 +11,7 @@
         * learned about apache flink, 
         * designed the system within the hotwire ecosystem. 
         * response time of the service was really fast ~50 ms. 
-2. What has been the most challenging situation in your career so far ?
+2. What has been the most challenging situation(technical/non-technical) in your career so far ?
     * Managing an under performer which was hired by me.
 
             1. It was when I started acting as a tech lead in Expedia.
@@ -39,6 +39,45 @@
             8. Then, I connected with another engineering manager/lead who was leading a mobile development team in PayPal for the last 2-3 years to understand how we estimate, what all things/gotchas we need to keep in mind. What are different kinds of dependencies we have within PayPal like localization team, analytics team (for FPTI events and analytics), UX team for any design related changes, PayPal UI kit team for any UI component related dependencies & Mobile release engineering team for release process related dependencies.
             9. At the end we were able to deliver the project within the timelines although It was a great learning experience for me on the mobile development side to understand the development cycle and various mobile specific dependencies and all.
             10. I had to persuade the contractors to get it done within the timelines, we had to work on some weekends too. I was sitting with my developers day and night on weekends to help them in any manner I can.
+    * Solving an issue with ODL service
+        * The issue started after we migrated our services from on-premise servers to AWs EC2 VMs.
+        * After migration, during performance/stress testing we found out that the services were responding slow after couple of days of getting full traffic.
+        * And servers were so much choked and unresponsive that it was really difficult to get Heap/Thread dump.
+        * It took us like 2-3 days to just take heap/thread dump.
+        * After analyzing the thread dump, we found that after some time our application was not able to open an HTTP connection to downstream services.
+        * And started to timeout due to not able to open those HTTP connection.
+        * We debugged it further and found after lot of reading over internet that one possible cause of not able to open HTTP connection can be File descriptor limit.
+        * So, started to look into the issue keeping this file descriptor perspective in mind.
+        * We did not have any application specific File descriptor limit on older servers. So, we thought how could FD limit can be an issue on new servers.
+        * But then after futher debugging we found out that the docker version which were using on our old server was very old version.
+        * This old docker version was not having a default limit on file descriptor for a container.
+        * But on AWS EC2 VMs, We had latest docker version which was having a default limit of file descriptor to 5k per container.
+        * So we tried changing that default limit at container level. Then again stress tested the application.
+        * After changing the FD limit services were running fine. And we never saw that slowness/high cpu usage issue for these services.
+        * Learning : 
+            * We should not have brought down the older servers before monitoring new servers for some time.
+            * We should have done enough application stress testing after migration.
+            * During migration, we should have accounted for each every infrastructure/tools difference while looking into this issue.
+    * Issue with increased number of cursors on DB from our loyalty card service.
+        * After 3 months of going live, we got an email from DB team stating that they see many open cursors from one of our microservice to DB.
+        * So, we had call with DBA team to understand why these cursors are in open state.
+        * So, they told that you passing one of the parameter as harcoded in the query, ideally you should pass those as bind variables.
+        * When the query is passed to the SQL engine ,the query is hard parsed each and every time and create new SQL cursor, which makes issues with lot of open cursors when DDL changes done on the table.
+        * The advantage of using bind variables is that, if the same query is executed multiple times with different values being bound in, then the same execution plan is used because the query itself hasn't actually changed
+        * We checked our code, we were using ORM (Spring data JPA), so were sure that atleast from code level we have not hardcoded any parameters.
+        * Then, we did a research around like how internally ORM is translating the queries with these parameters.
+        * And found out that ORM has this LiteralBindingMode this mode has value "AUTO" by default which is one of supported enumerated values.
+        * In "AUTO" LiteralBindingMode ORM send all the parameter as bind variable except the numeric parameters.
+        * we had user's account_id as numeric parameter and this parameter was being used in almost all the queries (update, read).
+        * So, figured out because account_id is numeric parameter this is not being translated as bind variable due to the "AUTO" LiteralBindingMode.
+        * Obviously, we couldn't change account_number. So, we looked into other supporting modes and found that there is "BIND" mode which translates all the parameters to bind variables including numeric one.
+        * so, we changed this mode in our configuration and deployed the change.
+        * After couple of days, number of cursors got reduced.
+        * Learning
+            * We should understand a framework's internals before using it.
+            * We should have monitored DB by taking help from DBA team during stress testing of our application.
+        
+        
 3. Tell me about a time when you were asked to do something you had never done before. How did you react? What did you learn?
     * Leading a full stack team given that I did not have much knowledge about Mobile/FE development.
         * I took it up as a challenge. I learnt about the mobile development ecosystem within PayPal.
