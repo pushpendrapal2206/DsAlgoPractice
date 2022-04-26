@@ -30,13 +30,13 @@
     * Leading a full stack team given that I did not have much knowledge about Mobile/FE development.
             
             1. So, I was given this opportunity last year to lead a full stack team. 
-            2. I took up this opportunity. We owned a new team which was being run from San jose.
+            2. I took up this opportunity. We owned a new team which was being run from different location earlier.
             3. We started running it from Bangalore, we had this transition during mid FEB 2021 
             4. And we needed to meet the timelines for the DW2.0 project for Q1 which was targeted for the end of March 2021.
             5. After transition we figured out that there was a lot of work pending on the mobile development side & some work on the BE side along with api contract approval.
             6. It was a challenge to understand the actual estimates of the remaining work because I was not very familiar with mobile development.
-            7. So, I learned it in a structured manner. I learnt about figma designs and then had multiple meetings with mobile developers in time to understand the time each screen would take to develop/test and to understand the rationale behind those estimates.
-            8. Then, I connected with another engineering manager/lead who was leading a mobile development team in PayPal for the last 2-3 years to understand how we estimate, what all things/gotchas we need to keep in mind. What are different kinds of dependencies we have within PayPal like localization team, analytics team (for FPTI events and analytics), UX team for any design related changes, PayPal UI kit team for any UI component related dependencies & Mobile release engineering team for release process related dependencies.
+            7. So, I learned it by talking to different folks. I learnt about figma designs and then had multiple meetings with mobile developers in time to understand the time each screen would take to develop/test and to understand the rationale behind those estimates.
+            8. Then, I connected with other engineering managers/leads who were leading a mobile development team in PayPal for the last 2-3 years to understand how we estimate, what all things/gotchas we need to keep in mind. What are different kinds of dependencies we have within PayPal like localization team, analytics team (for FPTI events and analytics), UX team for any design related changes, PayPal UI kit team for any UI component related dependencies & Mobile release engineering team for release process related dependencies.
             9. At the end we were able to deliver the project within the timelines although It was a great learning experience for me on the mobile development side to understand the development cycle and various mobile specific dependencies and all.
             10. I had to persuade the contractors to get it done within the timelines, we had to work on some weekends too. I was sitting with my developers day and night on weekends to help them in any manner I can.
     * Solving an issue with ODL service
@@ -60,13 +60,13 @@
             * During migration, we should have accounted for each every infrastructure/tools difference while looking into this issue.
     * Issue with increased number of cursors on DB from our loyalty card service.
         * After 3 months of going live, we got an email from DB team stating that they see many open cursors from one of our microservice to DB.
-        * So, we had call with DBA team to understand why these cursors are in open state.
-        * So, they told that you passing one of the parameter as harcoded in the query, ideally you should pass those as bind variables.
-        * When the query is passed to the SQL engine ,the query is hard parsed each and every time and create new SQL cursor, which makes issues with lot of open cursors when DDL changes done on the table.
+        * So, we had a call with DBA team to understand why these cursors are in open state.
+        * they told that you are passing one of the parameter as hardcoded in the query, ideally you should pass those as bind variables.
+        * When the query is passed to the SQL engine,the query is hard parsed each and every time and create new SQL cursor, which makes issues with lot of open cursors when DDL changes done on the table.
         * The advantage of using bind variables is that, if the same query is executed multiple times with different values being bound in, then the same execution plan is used because the query itself hasn't actually changed
         * We checked our code, we were using ORM (Spring data JPA), so were sure that atleast from code level we have not hardcoded any parameters.
         * Then, we did a research around like how internally ORM is translating the queries with these parameters.
-        * And found out that ORM has this LiteralBindingMode this mode has value "AUTO" by default which is one of supported enumerated values.
+        * we found out that ORM has this LiteralBindingMode this mode has value "AUTO" by default which is one of supported enumerated values.
         * In "AUTO" LiteralBindingMode ORM send all the parameter as bind variable except the numeric parameters.
         * we had user's account_id as numeric parameter and this parameter was being used in almost all the queries (update, read).
         * So, figured out because account_id is numeric parameter this is not being translated as bind variable due to the "AUTO" LiteralBindingMode.
@@ -76,8 +76,6 @@
         * Learning
             * We should understand a framework's internals before using it.
             * We should have monitored DB by taking help from DBA team during stress testing of our application.
-        
-        
 3. Tell me about a time when you were asked to do something you had never done before. How did you react? What did you learn?
     * Leading a full stack team given that I did not have much knowledge about Mobile/FE development.
         * I took it up as a challenge. I learnt about the mobile development ecosystem within PayPal.
@@ -93,7 +91,7 @@
         * I had to do it because we had strict delivery timelines for the project and because we just owned this team. So, on the functional front, the team was not aware about every corner use case. 
 5. Describe the best partner or supervisor with whom you’ve worked. What part of their managing style appealed to you?
     * This was when I was part of the Loyalty team, acting as a lead.
-        * I really liked my manager because he was so good at identifying the potential of the team mates and assigning the roles to them as per their capability.
+        * I really liked my manager because he was so good at identifying the potential of the teammates and assigning the roles to them as per their capability.
         * I like that he used to believe in freedom and independence. Even when he assigned me a tech lead role. Even though i told him that I don’t have expertise in Mobile development.
         * He said that, I have confidence in you that you can play this role effortlessly.
         * So, he used to identify the person’s capability very quickly and then have a growth path for the person even if that person doesn’t believe in his capabilities.
@@ -121,3 +119,38 @@
         * So, I told him that it will be good if we release and put into a pool of candidates which can be used by other teams.
         * So, yeah we literally have to let him go. 
         * It was a very tough situation for me to decide because I was facing this the first time as a tech lead where on the basis of my decision somebody was being fired.
+8. Describe a situation when you had a simple fix for a complex situation.
+    * Talked about TCP connection issue due to File descriptors in ODL services.
+         * The issue started after we migrated our services from on-premise servers to AWS EC2 VMs.
+         * After migration, during performance/stress testing we found out that the services were responding slow after couple of days of getting full traffic.
+         * And servers were so much choked and unresponsive that it was really difficult to get Heap/Thread dump.
+         * It took us like 2-3 days to just take heap/thread dump.
+         * After analyzing the thread dump, we found that after some time our application was not able to open an HTTP connection to downstream services.
+         * And started to timeout due to not able to open those HTTP connection.
+         * We debugged it further and found after lot of reading over internet that one possible cause of not able to open HTTP connection can be File descriptor limit.
+         * So, started to look into the issue keeping this file descriptor perspective in mind.
+         * We did not have any application specific File descriptor limit on older servers. So, we thought how could FD limit can be an issue on new servers.
+         * But then after further debugging we found out that the docker version which were using on our old server was very old version.
+         * This old docker version was not having a default limit on file descriptor for a container.
+         * But on AWS EC2 VMs, We had latest docker version which was having a default limit of file descriptor to 5k per container.
+         * So we tried changing that default limit at container level. Then again stress tested the application.
+         * After changing the FD limit services were running fine. And we never saw that slowness/high cpu usage issue for these services.
+         * Learning : 
+              * We should not have brought down the older servers before monitoring new servers for some time.
+              * We should have done enough application stress testing after migration.
+              * During migration, we should have accounted for each every infrastructure/tools difference while looking into this issue.
+         * Followup :
+            * how did you get to know that issue was due to file descriptors ?
+9. Describe when you came up with some innovative ideas that was adopted and deployed in prod.
+    * Showing hotel names for opaque deals on hotwire.com
+        * Proposed this feature during Hackathon where if we start showing hotel names for opaque deals that it will increase conversion rate.
+        * follow up : 
+            * How did you influence to adopt this feature ?
+                * Because the idea was chosen as winner in the Hackathon, so it was easy to prioritize it, and have it as part of the roadmap.
+10. Describe a situation when you had to deal with a project with tight deadlines. How did you manage it ?
+    * Talked about DW2.0 project which was part of PayPal digital wallet.
+        * Talked about resourcing and have support from other teams to meet timelines.
+        * Persuaded few engineers to work on weekends to meet the timelines.
+        * Because it was org wide project, so deadline can't be extended because delay with any of the domain team will cause delay to overall program.
+11. Describe a situation when you had to increase/boost the morale of the team members.
+12. Describe a situation when you received a feedback from colleagues. what was the feedback. And, how did you take it ?
