@@ -11,6 +11,11 @@
         * learned about apache flink, 
         * designed the system within the hotwire ecosystem. 
         * response time of the service was really fast ~50 ms. 
+    * Loyalty Platform
+        * Got to learn a lot because I was owning the platfrom end to end.
+        * Got to learn things related to mobile & front end development.
+        * It was good experience and learning designing the whole platfrom from scratch.
+        * Got to learn from business standpoint too.
 2. What has been the most challenging situation(technical/non-technical) in your career so far ?
     * Managing an under performer which was hired by me.
 
@@ -123,18 +128,18 @@
     * Talked about TCP connection issue due to File descriptors in ODL services.
          * The issue started after we migrated our services from on-premise servers to AWS EC2 VMs.
          * After migration, during performance/stress testing we found out that the services were responding slow after couple of days of getting full traffic.
-         * And servers were so much choked and unresponsive that it was really difficult to get Heap/Thread dump.
+         * server were unresponsive due to exhaustion of resources. So, it was really difficult to get Heap/Thread dump.
          * It took us like 2-3 days to just take heap/thread dump.
          * After analyzing the thread dump, we found that after some time our application was not able to open an HTTP connection to downstream services.
-         * And started to timeout due to not able to open those HTTP connection.
+         * So, it started to timeout due to not able to open those HTTP connection.
          * We debugged it further and found after lot of reading over internet that one possible cause of not able to open HTTP connection can be File descriptor limit.
          * So, started to look into the issue keeping this file descriptor perspective in mind.
          * We did not have any application specific File descriptor limit on older servers. So, we thought how could FD limit can be an issue on new servers.
-         * But then after further debugging we found out that the docker version which were using on our old server was very old version.
+         * After further debugging we found out that the docker version which were using on our old server was a very old version.
          * This old docker version was not having a default limit on file descriptor for a container.
-         * But on AWS EC2 VMs, We had latest docker version which was having a default limit of file descriptor to 5k per container.
-         * So we tried changing that default limit at container level. Then again stress tested the application.
-         * After changing the FD limit services were running fine. And we never saw that slowness/high cpu usage issue for these services.
+         * We had the latest docker version on AWS EC2 VMs, which was having a default limit of file descriptor to 5k per container.
+         * We tried changing that default limit at container level. Then again stress tested the application.
+         * After changing the FD limit services were running fine. We never saw that slowness/high cpu usage issue for these services.
          * Learning : 
               * We should not have brought down the older servers before monitoring new servers for some time.
               * We should have done enough application stress testing after migration.
@@ -153,4 +158,40 @@
         * Persuaded few engineers to work on weekends to meet the timelines.
         * Because it was org wide project, so deadline can't be extended because delay with any of the domain team will cause delay to overall program.
 11. Describe a situation when you had to increase/boost the morale of the team members.
-12. Describe a situation when you received a feedback from colleagues. what was the feedback. And, how did you take it ?
+12. Describe a situation when you received a feedback from colleagues. what was the feedback. How did you take it ?
+13. Describe a situation when you had conflicts with your manager or colleague. How did you handle it ?
+14. Describe a situation when you received a constructive feedback ? How did you act upon it ?
+15. Describe a situation when you have worked on something which was not part of your role ? 
+16. Describe a situation when you proposed an idea and it was not accepted. How did feel about it ? Were you able to get satisfactory answers to not accepting your idea ?
+17. Tell me about your most interesting project ?
+    * General context of project (Goal, vision, customer impact ) ?
+        * Use case was to digitize the loyalty cards from a merchant for customers. Which will give 2 benefits to customers, they need not to carry physical loyalty cards with them, and they can easily earn burn points(In-Store/Online) using digital loyalty cards.
+    * Team structure and my contribution for the project ?
+        * Team of 8 engineers : full stack team (2 android, 2 iOS, 1 web front end developer, 2 BE engineers, 1 QA lead, 1 EM)
+        * I was involved in this project right from requirement gathering phase, so started coordinating with product manager and other stakeholder who we might have potential dependency like RPS team, mobile release engineering team, infrastructure team, personalization team for creating customer segments, UI Kit team, security team, develops team, localization/translation team for content localization, Analytics team, prod support team, PPAAS team.
+        * Finalized the design within PayPal ecosystem, reusing certain components which can be re-used.
+        * Came up with requirements understandable by engineers in terms of Jira stories.
+        * Came up with capacity requirements and coordinated with infra team for provisioning the infrastructure.
+    * Decision making, tradeoffs & technical deep dive ? 
+        * Went ahead with phase1 where we prioritised consumer side use case mainly and developed it keeping in mind that customers should be able to scan or manually enter their card information.
+        * Then immediately we picked up phase 2 where we developed a self service portal to allow merchants to come and get onboarded easily by creating a loyalty program via self service portal.
+        * We developed 2 microservices , 1 batch job, android/iOS modules in our app and Web portal. We are using Oracle Database because we don’t see data growing at very fast rate (practically a customer might not have more than 10 loyalty cards). We don’t have so many write requests.
+        * Our system was read heavy, 1:1000 every write we have like 1000 reads, loyaltycardserv is mainly caters to read use cases and it stores the program information in cache with a TTL of 60 mins so that it need not to call program service everytime for the merchants. Program information is rarely updated. But we have an event based system in place which allows any updates to be reflected in cache as well.
+        * We have around 400-500 rps on an average for read requests. On daily basis we get around millions of read calls.
+        * We introduced, attribute based feature where we update the a central RPS attribute to true or false if a customer adds/removes a card and number of remaining cards are 0, this attribute can be used to define the segments of the customer, so we ended up reducing unnecessary read calls to our system for the customer who come under no_loyalty_segment.
+        * At code defined the definition of done for any story, it should have unit tests/functional test written should be deployed and tested to stage should have logs or postman screenshots attached.
+        * We used splunk & signalfx for monitoring and observability, had different kind of signalfx alerts integrated with pager duty, like traffic increase/decrease, latency, number of 5xx, number of 4xx etc. We also had dashboards to monitor system health.
+        * Trade offs were choosing same database for both the services with different schema, but at application level we have kept it separate so that tomorrow we should be able to use different database for services, another trade off we went ahead with in interest of time, wanted to enable it for US only and then see how it would it turn out for business. So, we did not consider much about scaling to other countries from functional standpoint, what if merchant want to different representation in different countries for their programs and have localised content like program description.
+    * Any outcomes, learning, key takeaways ?
+        * outcome was positive. We now have around 250 - 300k cards in the system in last 1 year.
+        * More than 10k  customers have signed up for new loyalty cards via paypal for different merchants.
+        * Yes, definitely got to learn how to manage such a project e2e thinking about all the aspects of end to end system including security, quality, user experience etc.
+        * Do a deep dive before using any framework no matter how mature is it ?
+        * Also, see the behaviour and performance of your downstream dependencies not just your system performance. 
+    * How did you measure the success of the project ?
+        * We measured the success by conversation rate (which is number of customers who have added cards vs the customer landed on loyalty hub dashboard).
+    * Ambiguity, how did you approach this and handle it ?
+        * Ambiguity around deciding whether we should have 2 different services.
+        * Ambiguity around deciding whether to have self-service portal or an off-line process for program creation.
+        * Ambiguity around deciding approach to have solution for new user signup for loyalty cards (long term vs short term).
+        * Ambiguity around having the role management and workflow in place for program update via self-service portal.
