@@ -195,3 +195,10 @@
         * Ambiguity around deciding whether to have self-service portal or an off-line process for program creation.
         * Ambiguity around deciding approach to have solution for new user signup for loyalty cards (long term vs short term).
         * Ambiguity around having the role management and workflow in place for program update via self-service portal.
+18. What is your leadership style ?
+19. What do you value ?
+20. What are your Organizational Principles ?
+21. What kind of culture do you cultivate ?
+22. What decision framework do you follow ?
+23. What are your management expectations ?
+24. What will be your plan (30/60/90) plan after you join us ?
