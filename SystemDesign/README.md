@@ -13,3 +13,6 @@
     2. https://github.com/prasadgujar/low-level-design-primer
     3. https://microservices.io/patterns/data/database-per-service.html
     4. https://channel9.msdn.com/Events/NDC/NDC-Oslo-2017/BRK03
+ 
+* Educative Courses
+      https://github.com/the-prksh/educative-courses 
