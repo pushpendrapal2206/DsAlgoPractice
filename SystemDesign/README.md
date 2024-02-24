@@ -15,4 +15,25 @@
     4. https://channel9.msdn.com/Events/NDC/NDC-Oslo-2017/BRK03
  
 * Educative Courses
-      https://github.com/the-prksh/educative-courses 
+      https://github.com/the-prksh/educative-courses
+
+* Additional Resources
+  1. Log Structured Merge Tree: https://lnkd.in/egy4nhHk
+  2. Bitcoin: https://lnkd.in/edcxjt-g
+  3. TAO: https://lnkd.in/eztcaVFq
+  4. Google File System: https://lnkd.in/eFMwQkTt
+  5. BigTable: https://lnkd.in/eCDFy3ib
+  6. CAP Theorem: https://lnkd.in/eszDPTU3
+  7. Kafka: https://lnkd.in/eYXTCXPY
+  8. Chubby: https://lnkd.in/eG_4Kx46
+  9. MapReduce: https://lnkd.in/eWqm7-n4
+  10. Google Spanner: https://lnkd.in/eWnavqzg
+  11. Consistent Hashing: https://lnkd.in/eZbbfeKC
+  12. Out of the Tar Pit: https://lnkd.in/eXnmufE3
+  13. The Part-Time Parliament: https://lnkd.in/eJV9U8z7
+  14. Raft: https://lnkd.in/eRkz6AA3
+  15. TLA+: https://lnkd.in/eJc6CRZi
+  16. Scaling Memcache at Facebook: https://lnkd.in/eiZJnA6t
+  17. Borg: https://lnkd.in/e5nyt8cD
+  18. Amazon Dynamo: https://lnkd.in/eDRwqRTi
+  19. The Next 700 Programming Languages: https://lnkd.in/efskzzcW
