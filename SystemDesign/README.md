@@ -39,3 +39,5 @@
   19. The Next 700 Programming Languages: https://lnkd.in/efskzzcW
 
 https://www.linkedin.com/posts/nk-systemdesign-one_coding-programming-softwaredevelopment-activity-7168595062359052289-QPwH?utm_source=share&utm_medium=member_android
+
+https://blog.allegro.tech/2024/03/kafka-performance-analysis.html
