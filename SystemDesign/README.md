@@ -43,3 +43,6 @@ https://www.linkedin.com/posts/nk-systemdesign-one_coding-programming-softwarede
 https://blog.allegro.tech/2024/03/kafka-performance-analysis.html
 
 https://www.linkedin.com/posts/nk-systemdesign-one_coding-programming-softwaredevelopment-activity-7175488430196322306-FMAv?utm_source=share&utm_medium=member_android
+
+* Apache Spark
+  1. https://www.linkedin.com/posts/shubhamwadekar_spark-data-dataengineering-activity-7178246825999556609-CjSI?utm_source=share&utm_medium=member_android
