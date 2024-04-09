@@ -46,3 +46,6 @@ https://www.linkedin.com/posts/nk-systemdesign-one_coding-programming-softwarede
 
 * Apache Spark
   1. https://www.linkedin.com/posts/shubhamwadekar_spark-data-dataengineering-activity-7178246825999556609-CjSI?utm_source=share&utm_medium=member_android
+
+* Roadmap from Software Developer to Architect
+https://medium.com/@yt-cloudwaydigital/from-software-developer-to-software-architect-roadmap-to-success-695951521d9b
