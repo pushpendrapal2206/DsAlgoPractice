@@ -160,10 +160,20 @@
 11. Describe a situation when you had to increase/boost the morale of the team members.
 12. Describe a situation when you received a feedback from colleagues. what was the feedback. How did you take it ?
 13. Describe a situation when you had conflicts with your manager or colleague. How did you handle it ?
-14. Describe a situation when you received a constructive feedback ? How did you act upon it ?
-15. Describe a situation when you have worked on something which was not part of your role ? 
-16. Describe a situation when you proposed an idea and it was not accepted. How did feel about it ? Were you able to get satisfactory answers to not accepting your idea ?
-17. Tell me about your most interesting project ?
+       * "During a project, my manager asked me to persuade a few team members to work over the weekend to address an issue that would improve       
+          development efficiency.
+          * While I understood the importance of the task, I was aware that the team had already been working long hours and stretching their limits."
+          * I believed that pushing them further could lead to burnout, ultimately affecting their morale and productivity. I shared my concerns with             my manager and emphasized the importance of balancing workload to maintain long-term team efficiency.
+          * To find a middle ground, I suggested alternative solutions, such as prioritizing tasks for the upcoming week or redistributing          
+             responsibilities to avoid overburdening the team.
+          * My manager appreciated my perspective and agreed to defer the task to the following week. This allowed the team to rest and return    
+             recharged, ensuring the issue was resolved efficiently without compromising their well-being.
+          * This experience taught me the importance of open communication and standing up for my team’s well-being while aligning with    
+             organizational goals. It also reinforced the value of proposing constructive alternatives when addressing differences in priorities.
+15. Describe a situation when you received a constructive feedback ? How did you act upon it ?
+16. Describe a situation when you have worked on something which was not part of your role ? 
+17. Describe a situation when you proposed an idea and it was not accepted. How did feel about it ? Were you able to get satisfactory answers to not accepting your idea ?
+18. Tell me about your most interesting project ?
     * General context of project (Goal, vision, customer impact ) ?
         * Use case was to digitize the loyalty cards from a merchant for customers. Which will give 2 benefits to customers, they need not to carry physical loyalty cards with them, and they can easily earn burn points(In-Store/Online) using digital loyalty cards.
     * Team structure and my contribution for the project ?
@@ -195,10 +205,10 @@
         * Ambiguity around deciding whether to have self-service portal or an off-line process for program creation.
         * Ambiguity around deciding approach to have solution for new user signup for loyalty cards (long term vs short term).
         * Ambiguity around having the role management and workflow in place for program update via self-service portal.
-18. What is your leadership style ?
-19. What do you value ?
-20. What are your Organizational Principles ?
-21. What kind of culture do you cultivate ?
-22. What decision framework do you follow ?
-23. What are your management expectations ?
-24. What will be your plan (30/60/90) plan after you join us ?
+19. What is your leadership style ?
+20. What do you value ?
+21. What are your Organizational Principles ?
+22. What kind of culture do you cultivate ?
+23. What decision framework do you follow ?
+24. What are your management expectations ?
+25. What will be your plan (30/60/90) plan after you join us ?
