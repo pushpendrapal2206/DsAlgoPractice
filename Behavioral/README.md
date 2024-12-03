@@ -164,12 +164,12 @@
           development efficiency.
           * While I understood the importance of the task, I was aware that the team had already been working long hours and stretching their limits."
           * I believed that pushing them further could lead to burnout, ultimately affecting their morale and productivity. I shared my concerns with             my manager and emphasized the importance of balancing workload to maintain long-term team efficiency.
-          * To find a middle ground, I suggested alternative solutions, such as prioritizing tasks for the upcoming week or redistributing          
-             responsibilities to avoid overburdening the team.
+          * To find a middle ground, I suggested alternative solutions, such as prioritizing tasks for the upcoming week or redistributing    
+            responsibilities to avoid overburdening the team.
           * My manager appreciated my perspective and agreed to defer the task to the following week. This allowed the team to rest and return    
-             recharged, ensuring the issue was resolved efficiently without compromising their well-being.
+            recharged, ensuring the issue was resolved efficiently without compromising their well-being.
           * This experience taught me the importance of open communication and standing up for my team’s well-being while aligning with    
-             organizational goals. It also reinforced the value of proposing constructive alternatives when addressing differences in priorities.
+            organizational goals. It also reinforced the value of proposing constructive alternatives when addressing differences in priorities.
 15. Describe a situation when you received a constructive feedback ? How did you act upon it ?
 16. Describe a situation when you have worked on something which was not part of your role ? 
 17. Describe a situation when you proposed an idea and it was not accepted. How did feel about it ? Were you able to get satisfactory answers to not accepting your idea ?
