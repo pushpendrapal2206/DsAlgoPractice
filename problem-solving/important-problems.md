@@ -1,9 +1,7 @@
 ## Arrays / Two Pointers / Hashing
 
 1. 3Sum: https://lnkd.in/gev7gEzS
-
 2. Container With Most Water: https://lnkd.in/gY2vxRMn
-
 3. Longest Consecutive Sequence: https://lnkd.in/gMWgaJhS
 
 ## Strings
