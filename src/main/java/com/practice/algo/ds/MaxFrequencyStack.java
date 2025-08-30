@@ -25,7 +25,7 @@ public class MaxFrequencyStack {
     public int pop() {
         int output = group.get(maxFreq).pop();
         freq.put(output, freq.get(output) - 1);
-        if (group.get(maxFreq).size() == 0)
+        if (group.get(maxFreq).isEmpty())
             maxFreq = maxFreq - 1;
         return output;
     }

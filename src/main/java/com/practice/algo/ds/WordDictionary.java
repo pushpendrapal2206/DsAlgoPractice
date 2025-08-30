@@ -40,8 +40,18 @@ class WordDictionary {
             if (!temp.node.containsKey(c)) {
                 return false;
             }
+            if(c == '.') {
+                backtrack(temp);
+            }
             temp = temp.node.get(c);
         }
         return temp.isLast;
+    }
+
+    public boolean backtrack(WordDictionary trie) {
+        if(trie.isLast) {
+            return true;
+        }
+        return false;
     }
 }
