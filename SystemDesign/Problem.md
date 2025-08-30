@@ -67,5 +67,11 @@
               player can specify the number of players.
 
 6. **Design a Highway toll management System(HLD).**
+7. **Design an experimentation based system to turn on/off the features using flags along with a rule engine.**
+8. **Design a system like APNS/GCM to deliver notifications to billions of devices.**
+9. **Design a web scraping system that can scrap the given list of urls and extract the image urls.**
 
-7. **Design an experimentation based system to turn on/off the features using flags along with a rule engine.**   		
+        1. POST /jobs -> {urls: ["abc.com", "amazon.com"]}  -> response ({job_id: 1234})
+        2. GET /jobs/{job_id}/status -> {"completed": "1", "inprogress": "1"}
+        3. GET /jobs/{job_id}/results -> {"https://abc.com": ["abc.com/img1.jpg"],"https://amazon.com": ["amazon.com/img1.jpg"]}
+   
