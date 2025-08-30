@@ -67,5 +67,40 @@
               player can specify the number of players.
 
 6. **Design a Highway toll management System(HLD).**
+7. **Design an experimentation based system to turn on/off the features using flags along with a rule engine.**
+8. **Design a push notification delivery system like APNS or FCM.**
 
-7. **Design an experimentation based system to turn on/off the features using flags along with a rule engine.**   		
+        * Primary Use case : 
+            1. Feature to allow clients to send the push notification to a device on specific app.
+            2. Feature to send the delivery confirmation to clients
+        * NFR Requirements :
+            1. Number of Clients/apps -> 100M
+            2. Number of devices -> ~2B
+            3. Number of device per client/app -> > 5M < 10M, > 1M < 5M, < 1M
+        * NFR : 
+            1. Highly Available.
+            2. Scalable.
+            3. Resilient/Fault tolerant.
+            4. Low latency.
+
+9. **Design a system to deliver campaign emails to the users.**
+
+        * Primary Use case : 
+            1. Feature to onboard the campaigns.
+            2. Feature to schedule to email sending to 100K users.
+            3. Feature to have audit of delivery.
+        * NFR Requirements :
+            1. Number of Campaigns -> ~5M
+            2. Number of emails -> ~10B
+            3. Max number of emails per campaign -> ~1M
+        * NFR : 
+            1. Highly Available.
+            2. Scalable.
+            3. Resilient/Fault tolerant.
+            4. Low latency.
+10. **Design a web scraping system that can scrap the given list of urls and extract the image urls.**
+
+        1. POST /jobs -> {urls: ["abc.com", "amazon.com"]}  -> response ({job_id: 1234})
+        2. GET /jobs/{job_id}/status -> {"completed": "1", "inprogress": "1"}
+        3. GET /jobs/{job_id}/results -> {"https://abc.com": ["abc.com/img1.jpg"],"https://amazon.com": ["amazon.com/img1.jpg"]}
+   
