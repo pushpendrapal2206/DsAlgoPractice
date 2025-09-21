@@ -212,3 +212,9 @@
 23. What decision framework do you follow ?
 24. What are your management expectations ?
 25. What will be your plan (30/60/90) plan after you join us ?
+
+https://github.com/justinamiller/SoftwareArchitect
+https://github.com/AdyKalra/awesome-leadership
+Leadership: https://www.youtube.com/watch?v=R-7nlm2lUFc
+https://www.youtube.com/watch?v=sn6wokyCZSA
+https://www.youtube.com/watch?v=Yk5XC6ZMsf8
