@@ -213,8 +213,15 @@
 24. What are your management expectations ?
 25. What will be your plan (30/60/90) plan after you join us ?
 
-https://github.com/justinamiller/SoftwareArchitect
-https://github.com/AdyKalra/awesome-leadership
-Leadership: https://www.youtube.com/watch?v=R-7nlm2lUFc
-https://www.youtube.com/watch?v=sn6wokyCZSA
-https://www.youtube.com/watch?v=Yk5XC6ZMsf8
+1. https://github.com/justinamiller/SoftwareArchitect
+2. https://github.com/AdyKalra/awesome-leadership
+3. Leadership:
+   1. https://www.youtube.com/watch?v=R-7nlm2lUFc
+   2. https://www.youtube.com/watch?v=sn6wokyCZSA
+   3. https://www.youtube.com/watch?v=Yk5XC6ZMsf8
+4. https://github.com/liquidslr/leetcode-company-wise-problems
+5. https://deimos.io/post/authentication-and-authorization-in-a-distributed-system
+6. https://medium.com/swlh/handling-transactions-in-the-microservice-world-c77b275813e0
+7. https://developer.ibm.com/articles/use-saga-to-solve-distributed-transaction-management-problems-in-a-microservices-architecture/
+
+
