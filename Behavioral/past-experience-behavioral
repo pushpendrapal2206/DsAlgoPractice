@@ -1,0 +1,358 @@
+Focused on 3 Aspects
+	1. Outcome focused 
+		a. Responsibility of the long term evolution of the solution in order to meat the teams goal.
+		b. Best Practices to increase the effective improvement of the team.
+		c. Ability to pro-actively communicate with the stakeholders.
+			Example 1: Convincing Product to Prioritize Tech Excellence
+				• S: Our team proposed a tech excellence improvement, but the product team was hesistant to prioritize it since it had no direct customer ask.
+				• T: I needed to get the improvement prioritized by demonstrating its customer value.
+				• A: I proactively reached out to the client team, explained how this improvement could reduce crawl job processing time by 50%, and requested them to raise a formal DDR.
+				• R: Once the request came formally from the client, the product team prioritized it, recognizing the customer impact.
+			Example 2: Ensuring Feature Adoption Alignment
+				○ S: Product teams were prioritizing features without full clarity on whether they had customer alignment.
+				○ T: I had to ensure that prioritized features were actually aligned with customer needs.
+				○ A: I maintained ongoing communication with the client teams to verify adoption readiness and gathered feedback during planning phases.
+				○ R: This ensured better alignment between product planning and actual customer requirements, reducing rework and improving feature adoption.
+	
+		a. Led planning and delivery of the multiple projects, scope and significant contribution of my self.
+		Example: Platform Convergence Initiative
+			• S: PayPal had an enterprise-wide initiative to converge multiple platforms.
+			• T: I led the planning and delivery of BT convergence, including bringing tenant teams onto our platform.
+			• A:
+				○ Reached out to architects from tenant teams to understand how they currently shared reports.
+				○ Collaborated with Braintree and Hyperwallet to move their solutions to our platform.
+				○ Worked with the Infosec team to highlight the risks of tenants operating in non-compliant zones and the need to migrate to DropZone.
+			• R: The convergence reduced operational costs and enhanced platform security by consolidating systems and eliminating non-compliant zones.
+		b. Open ended questions like tell me a situation where you had to plan and execute the project end to end.
+			Example 1: Cloud Migration of In-House Crawling Platform
+				• S: Our in-house crawling platform needed to be migrated to the cloud and made data center (DCPC) compliant.
+				• T: I was responsible for leading the end-to-end planning and execution of the migration.
+				• A:
+					○ Collaborated with engineers/leads to design the solution.
+					○ Reviewed the design with senior architects and got alignment from dependency teams (NetSec, Infosec, Cloud Infra).
+					○ Validated design with key customers to identify hidden pain points.
+					○ Estimated efforts with engineers and mapped milestones to Sprints in an MSP.
+					○ Coordinated with product and program managers to raise DDRs for client migrations.
+					○ Followed up via CommSuite and supported onboarding/migration.
+					○ Set up regular office hours in both IST and PST to address customer queries and shield the team.
+				• R: The migration was successful, customer concerns were addressed proactively, and the team maintained focus without distractions.
+			
+			-------------------------------------------------------------------
+			Example 2: US Covered Data Access Program
+				• S: We needed to implement a compliant solution for the US Covered Data Access Program.
+				• T: I led the planning and delivery of the entire program from concept to deployment.
+				• A:
+					○ Worked with engineers/leads to define the design.
+					○ Presented the solution to senior leadership (VP/VP+) and secured sign-off.
+					○ Helped the team estimate tasks and define MSP aligned with sprints.
+					○ Engaged with dependent teams for timeline alignment.
+					○ Used product and program managers to communicate urgency, involving directors to escalate impact.
+				• R: The project stayed on track and was successfully delivered with full cross-functional alignment and leadership buy-in.
+			
+	2. Leadership & strategy assessment
+	Forward-Looking Mindset on Establishing the North Star Architecture
+			• S: The Jeda Platform faces challenges in scalability, performance bottlenecks, and high infrastructure costs. The current architecture limits modularity and integration capabilities, making it difficult to adapt to evolving business needs.
+			• T: Define and implement a "north star architecture" that addresses these challenges while ensuring scalability, resilience, and efficiency. The architecture should serve as a blueprint for future enhancements and align with long-term business goals.
+			• A: Modular Design: Transition to a microservices-based architecture to improve modularity and scalability. Each service should have a well-defined API for seamless integration.
+				• Advanced Queueing Mechanisms: Implement priority-based queues and dynamic scaling to optimize resource utilization and improve performance.
+				• Real-Time Counter Systems: Design distributed counters with real-time updates and consistency mechanisms to handle high-volume data efficiently.
+				• Cloud-Native Technologies: Leverage cloud-native solutions like Kubernetes for orchestration and autoscaling, ensuring better resource utilization and fault tolerance.
+				• Machine Learning Integration: Incorporate machine learning models for intelligent crawling and prioritization, enabling smarter decision-making.
+				• Security and Compliance: Ensure the architecture adheres to security and data privacy standards, with regular audits and updates.
+				• Collaboration: Engage cross-functional teams for seamless integration and adoption of the new architecture.
+			• R: The "north star architecture" will provide a scalable, resilient, and efficient foundation for the Jeda Platform. It will reduce infrastructure costs, improve performance, and enable the platform to adapt to future business needs and technological advancements.
+		------------------------------------------------------------------------------------
+			• S: As part of enterprise-level initiatives like platform convergence (e.g., DropZone, BT, Hyperwallet), it was critical to define a long-term architectural direction to reduce fragmentation, improve security, and lower operational cost.
+			• T: I aimed to establish a clear North Star architecture that multiple dependent systems could converge toward, aligning with organizational goals around simplification, compliance, and extensibility.
+			• A:
+				□ Partnered with architects from multiple tenant teams to understand their existing architecture and constraints.
+				□ Identified key gaps in security posture and platform usage across systems.
+				□ Proposed a converged architecture using DropZone and internal platforms as the central routing mechanism.
+				□ Highlighted the future-proofing benefits (e.g., compliance alignment, reduced cost, centralized observability).
+			• R: The North Star architecture was endorsed by stakeholders and served as the blueprint for onboarding Braintree and Hyperwallet. It strengthened PayPal's platform ecosystem and minimized siloed custom solutions.
+		B. Pragmatic Trade-off Decisions, Right Timing for Change, Safeguards
+			• S: During planning for DCPC and Cloud migration of the in-house crawling platform, there were complex trade-offs between speed, security, and stability.
+			• T: I had to make pragmatic decisions about what to modernize, what to retain, and when to introduce changes—ensuring minimal risk and maximum business continuity.
+			• A:
+				□ Collaborated with Cloud Infra, Infosec, and NetSec teams to evaluate implications of proposed designs.
+				□ Deferred certain infrastructure optimizations like rest service and worker component until after initial rollout to de-risk migration timelines.
+				□ Documented rollback plans and tested migration steps incrementally with feature flags.
+			• R: The migration was delivered on time, with zero customer disruptions, and received positive feedback for both robustness and foresight.
+	
+		C. Ability to Approach a Problem with “Seek to Understand” and Articulate the opposite perspective of the decision.
+			§ S: A DropZone internal client couldn't push files to the destination, and while the root cause was on their side (misconfigured library), it wasn't immediately clear.
+			§ T: I needed to diagnose the issue calmly and objectively, despite it not originating in our platform.
+			§ A:
+				□ Scheduled a working session with the client team.
+				□ Asked targeted questions to understand their tech stack (learned they were using the Raptor library).
+				□ Researched the library docs myself to identify misconfigurations.
+				□ Walked the client through the change clearly, explained why the issue occurred, and how the solution worked.
+			§ R: The issue was resolved, the client was happy, and it strengthened internal trust. This reinforced a culture of accountability without blame, and also showcased the importance of empathetic problem-solving.
+	
+		Open-Ended Question: Talk Through a Design Decision
+			§ S: As part of the Payment Presentment Parity initiative, the GADS and AMPS teams needed a robust insights model integration to monitor and analyze parity across systems.
+			§ T: I was responsible for defining the architecture, aligning cross-functional teams, and ensuring the design scaled well across regions and data volumes.
+			§ A:
+				□ Analyzed technical requirements and stakeholder needs.
+				□ Proposed multiple architectural options (streaming vs. batch, embedded vs. external storage).
+				□ Facilitated design discussions across GADS, AMPS, and insights teams.
+				□ Recommended a balanced architecture that re-used existing data pipelines while integrating parity checks.
+				□ Captured the design in blueprints and validated it through stakeholder sign-off sessions.
+			§ R: The architecture was approved and implemented successfully. It reduced duplication of effort, ensured cross-system alignment, and reflected a “One PayPal” mindset.
+	3. Organizational Impact
+		a. Signals for where you showcased the knowledge sharing approach.
+			i. Wrote tech blogs on the learnings from the BT Convergence project.
+			ii. Wrote tech blogs on the learnings from the cloud migration of the crawling platform
+			§ Insightful Session on PayPal Infrastructure
+			§ Situation: The team needed a detailed understanding of PayPal's Datacenter, Security Zone, and Availability Zone to enhance their knowledge of the infrastructure and its relevance to their work.
+			§ Task: Deliver a comprehensive session to provide insights into PayPal's infrastructure.
+			§ Action: Prepared and conducted a detailed session, ensuring the information was relevant, clear, and valuable to the team's work.
+			§ Result: The team gained a thorough understanding of PayPal's infrastructure, finding the session highly valuable and relevant. The effort was appreciated for its depth and clarity.
+----------------------------------------------------------------------------------------------------------------
+
+		a. Crawl AI Demo to CTO and Tech Organization
+		b. Situation: The team needed to showcase Crawl AI to the CTO and the wider tech organization.
+		c. Task: Take the initiative to demo Crawl AI, articulating its technical aspects and value effectively.
+		d. Action: Prepared and delivered a crisp, detailed demo, showcasing technical understanding and presentation skills.
+		e. Result: The demo was well-received, with appreciation for the initiative, articulation, and technical depth.
+		
+		f. Being able to articulate the importance of providing the guidance.
+			i. It is very important to guide junior engineers not only on the tech front but also on the other non-tech behaviors like
+				1) Sense of Ownership
+				2) Importance of communication and transparency.
+				3) Importance to go above and beyond.
+				4) Zeal to learn and do more.
+				5) Collaboration.
+				
+		g. How well you are able to drive new ways of workings.
+		Example 1: Standardizing Development & Support Processes
+				• S: The team lacked consistency in how code was reviewed, estimated, and supported. There were inefficiencies in both development and production support practices.
+				• T: My goal was to introduce structured processes and clear expectations to improve team efficiency, quality, and reliability.
+				• A:
+					® Created reusable templates for design blueprints, pull requests, and effort estimation, standardizing how work was scoped and delivered.
+					® Defined expectations for the support team, shifting their role from just being coordinators to active problem-solvers.
+					® Established a process requiring a minimum of two PR reviews for any production change to ensure code quality and reduce risk.
+					® Encouraged the team to create and maintain SOPs for production support, fostering a knowledge-sharing culture.
+				• R: These initiatives improved engineering efficiency, reduced production issues, and elevated the quality of both development and support workflows.
+				• T: Learned that a mix of process enforcement and team empowerment builds long-term sustainability in engineering practices.
+		
+		Example 2: Promoting a Culture of Documentation
+				• S: New engineers often struggled during onboarding, and production support was inconsistent due to lack of centralized documentation.
+				• T: I aimed to introduce a documentation-first culture to reduce tribal knowledge and improve team self-sufficiency.
+				• A:
+					○ Introduced comprehensive SOPs, RTB (Run-The-Business) guides, and an onboarding document for new joiners.
+					○ Encouraged team members to document learnings and support processes in real time.
+				• R: Onboarding became faster and smoother, with new engineers becoming productive earlier. Support teams were also able to operate more independently, reducing escalation load on engineering.
+				• T: Reinforced the importance of proactive knowledge management for team scalability.
+		Example 3: Driving Innovation Through Hackathons
+				□ S: Engineers had innovative ideas and POCs that were often deprioritized in favor of sprint work and never integrated or explored further.
+				□ T: I wanted to create a dedicated forum to channel those ideas and foster innovation.
+				□ A:
+					® Initiated regular hackathons, encouraging engineers to explore new ideas, technologies, and also revisit pending POCs.
+					® Created a framework to evaluate and integrate relevant hackathon outputs back into the product roadmap.
+				□ R: This initiative led to increased innovation, improved morale, and several useful internal tools or features that originated from hackathons.
+				□ T: Realized that innovation needs dedicated space and structure—it doesn’t happen spontaneously in high-velocity environments without support.
+	
+			
+		Example 1: Helping Engineers Improve Coding Skills
+				□ S: Some engineers on the team were struggling with certain aspects of coding and required hands-on guidance to improve their skill set.
+				□ T: I wanted to help them become more confident and independent in writing clean, efficient code.
+				□ A:
+					® Practiced pair programming with them and spent several hours on screen share sessions to explain logic, structure, and best practices.
+					® Gave constructive feedback during design and code reviews to reinforce standards and encourage learning.
+				□ R: The engineers showed noticeable improvement in code quality, gained confidence, and started contributing more actively to complex features.
+
+		Example 2: Providing Guidance During Production Issues
+				□ S: Engineers were unsure how to approach and debug issues during production incidents.
+				□ T: My role was to mentor them in real-time so they could develop independent debugging and triaging skills.
+				□ A:
+					® Joined them on calls during incidents and guided them through debugging strategies, log analysis, and triage steps.
+				□ R: Over time, engineers became more capable of handling production issues independently and required less supervision.
+
+		Example 3: Encouraging Ownership and Leadership
+				□ S: Junior engineers were hesitant to lead meetings or express their opinions in group settings.
+				□ T: I wanted to boost their confidence and create a safe environment for them to take ownership.
+				□ A:
+					® Invited them to relevant meetings, gradually encouraging them to lead discussions and present updates.
+					® Stepped in only when needed to provide support, helping them feel empowered and heard.
+				□ R: Engineers began taking more ownership and actively participating in cross-functional interactions, leading to better engagement and growth.
+
+		Example 4: Promoting Knowledge Sharing and Recognition
+				□ S: There was little formal visibility for the good work engineers were doing, and knowledge sharing was ad hoc.
+				□ T: I wanted to both increase visibility and create a culture of recognition and sharing.
+				□ A:
+					® Encouraged engineers to write technical blogs to share their insights and learnings.
+					® Sent regular "props" and public recognition emails highlighting their work—copying in product directors, senior architects, and engineering leadership to boost their visibility.
+				□ R: Engineers felt more valued, motivated, and engaged. It also improved their visibility within the larger organization and helped spread knowledge across teams.
+
+Draft some really good answers that covers all of the above areas.
+	1. For most of the answers, it requires data pointers, talk about data and metrics that were involved, use proper data metrics that successfully represent the success.
+	2. Talk about risk mitigation plan that were introduced.
+	3. Look at the project that had long term vision, (3 to 4 years).
+	4. Do emphasize the various initiative that you have brought in within the teams, dev productivity, junior mentorship.
+	5. Communication cadence with immediate leadership and stakeholders, how do you ensure that you are able to communicate the success metric is on track for a given period.
+		a. Having regular 1:1 with relevant stakeholder like product, program, eng. Manager, director and sr. architects.
+		b. Surfacing up the concern to senior leadership, director
+	6. Talk about various complex projects, project that had huge scale or complexity.
+		a. Braintree/HyperWallet Convergence.
+		b. Jeda's re-architecture to support DCPC & distribute via pub sub.
+		c. Long term vision for Jeda's re-architecting -> Cloud native and practically infinitely scalable.
+		d. CrawlAI- > Guided crawl (via Web Agents). -> Rewrite the whole python code to nodejs.
+		e. Deployment automation and automated patching of DropZone for custom components.
+		f. DropZone's File share architecture overhaul.
+		g. DropZone's scalable retention management implementation.
+		h. Loyalty Platform
+			i. Instrumentation & observability : Owned observability metrics for loyalty platform and enabled team to set up pager duty, alerts and creating dashboards for critical loyalty services.
+		
+Atlassian Values -> Very Important
+	1. Open Company, no bullshit.
+		1. Alignment with product on the prioritization.
+			§ Situation
+				□ The team prioritized and implemented a mobile web crawling feature, delivering it on time. However, it was later discovered that none of the client teams adopted the feature, leading to wasted effort and resources.
+			§ Task
+				□ Address the lack of adoption for prioritized features and establish a process to ensure future projects are relevant and necessary for client teams.
+			§ Action
+				□ Initiated direct discussions with the product team to highlight the importance of adoption commitment from clients before prioritizing features.
+				□ Proposed and implemented an adoption matrix as part of the Product Requirements Document (PRD) to evaluate client interest and usage potential before feature prioritization.
+				□ Collaborated with stakeholders to integrate this process into the workflow, ensuring alignment across teams.
+			§ Result
+				○ The adoption matrix became a standard part of the PRD, enabling the team to prioritize relevant and necessary features. This ensured that the team's efforts were focused on impactful work, boosting morale and motivation as their contributions were actively used in production by customers.
+		2. Prioritizing the health of the team/team members.
+			§ Situation
+				□ A team member returned to work while still recovering from an illness, potentially impacting their health and ability to meet expectations.
+			§ Task
+				□ Ensure the team member prioritizes their health and recovery while fostering a supportive and understanding team environment.
+			§ Action
+				□ Addressed the situation openly in front of the team, emphasizing the importance of taking proper rest and recovering fully before returning to work.
+				□ Encouraged the team member to take the necessary time off to avoid undue pressure and ensure they are fully prepared to meet expectations upon their return.
+				□ Reinforced a culture of care and support within the team, highlighting the value of health and well-being.
+			§ Result
+				□ The team member felt supported and took the necessary time to recover fully. This approach fostered a positive and empathetic team culture, ensuring that health and well-being are prioritized alongside professional responsibilities.
+		
+	1. Build with heart and balance (Passion and fun)
+		1.  Learning Node.js and LangGraph for CrawlAI Project
+				○ S: The CrawlAI project involved unfamiliar technologies like Node.js and LangGraph, with concepts around AI agents and set-of-marks logic that were new to the team.
+				○ T: I wanted to support the team effectively and contribute meaningfully to a high-priority initiative.
+				○ A: Took the initiative to learn Node.js and LangGraph on my own time, diving into technical documentation and experimenting hands-on to understand AI agent behavior and interaction flows.
+				○ R: 
+					® I was able to contribute to the project effectively, guide team members, and help accelerate delivery by reducing the learning curve for others.
+					® I was able to increase the accuracy of the solution to 60+% from ~10%
+				○ (Optional Add-on): My proactive learning set a tone of technical curiosity and adaptability for the team, showing that stepping outside one’s comfort zone is a strength.
+		2. Learning Mobile (iOS & Android) Tech to Support Teammates
+				○ S: My team was dealing with mobile-specific challenges, but I didn’t have prior experience in iOS or Android development.
+				○ T: Despite it not being in my primary skillset, I wanted to support my teammates during critical delivery milestones.
+				○ A: I self-learned the basics of iOS and Android app architectures, tools, and debugging techniques to be able to provide value and remove blockers.
+				○ R: My support helped the team meet delivery deadlines, and teammates felt more confident knowing someone else could help when stuck. It also built trust and encouraged mutual support within the team.
+		3. Creating a Fun and Balanced Work Culture
+				• S: 
+					® Working in a high-pressure engineering environment, team morale and bonding can sometimes suffer, especially in remote or distributed teams.
+				• T:
+					®  I wanted to foster team camaraderie and provide intentional space for fun and connection.
+				• A:
+					• Initiated bi-weekly virtual happy hours for casual bonding.
+					• Hosted activities like Pictionary and other virtual games, casual chit-chat, and light-hearted sessions to create a relaxed atmosphere.
+					• Also helped coordinate offsite events when possible to encourage deeper personal connection.
+				• R: 
+					• These sessions improved team bonding, reduced stress, and contributed to a healthier team dynamic. It reinforced the idea that productivity and enjoyment don’t have to be mutually exclusive.
+				• (Optional Add-on): Over time, these sessions also helped junior team members open up more and encouraged better collaboration during work hours.
+			
+	2. Don't fuck the customer.
+		1. Reducing Customer Onboarding Time
+			• S: Customers experienced delays and inconsistencies during onboarding due to fragmented infrastructure provisioning and unclear steps.
+			• T: I aimed to simplify and speed up the onboarding process for a better customer experience.
+			• A: I moved some of the infrastructure provisioning responsibilities to our platform and created a unified onboarding experience, consolidating the steps into a streamlined flow.
+			• R: This significantly reduced customer onboarding time and improved the first-touch experience, leading to faster adoption and reduced confusion.
+		2. Merchant Cloud Migration – SFTP Connection Issue
+			• S: A PayPal merchant had migrated their infrastructure to the cloud and could no longer connect to Dropbox via SFTP from their new machine. The issue led to a lot of back-and-forth with the DropZone support team.
+			• T: I wanted to eliminate the deadlock and resolve the issue, even though it wasn’t caused by our platform.
+			• A:
+				○ Took ownership of the issue and conducted in-depth research.
+				○ Identified the root cause: a change in the maximum packet length on the merchant's VM.
+				○ Got on a call with the customer and suggested adding a specific parameter to the SFTP command.
+			• R: The change worked immediately. The customer was delighted with the resolution, even though it wasn't our fault. The issue was closed quickly, and customer satisfaction was preserved.
+		3. Internal Client File Transfer Failure
+			• S: A newly onboarded internal DropZone client couldn’t push files to their destination. The issue stemmed from their own configuration but they couldn’t diagnose it.
+			• T: I needed to assist the client in identifying and fixing the issue to ensure a successful onboarding.
+			• A:
+				○ Set up a call with the client to understand their application and library setup.
+				○ Found out they were using the Raptor library.
+				○ Reviewed Raptor documentation myself and discovered a missing config parameter in their setup.
+				○ Recommended the correct configuration change.
+			• R: The issue was resolved immediately after the change. The customer appreciated the hands-on support and guidance.
+		4. Enabling Self-Service Through Documentation
+			• S: Many customers had recurring questions and challenges during onboarding and early usage of the platform.
+			• T: I wanted to proactively reduce friction and support needs by improving self-service options.
+			• A:
+				○ Created FAQs and onboarding documents tailored to common customer pain points and scenarios.
+			• R: This reduced the number of support requests and improved onboarding success and customer confidence in using the platform independently.
+		5. Fixing the job failures in production.
+			• S: One of the customer reported the issue with crawling of large jobs.
+			• T: I wanted to fix the issue also to ensure in long term that jobs from different teams don't impact each other.
+			• A:
+				□ Worked with team to help them find out the root cause specific to large jobs.
+				□ Had a call with all the client teams, explained the situation to them, and convinced them to adhere to the slots.
+				□ Ensured that alerts are setup for detecting such issues, where the job has taken longer than expected to complete.
+			• R: 
+				□ GCP cost of Splinter in the past month was cut in half.
+				□ These jobs are running smoothly for quite some time now, reducing the time we spent on incidents/reruns/etc. to 0
+		
+	3. Play as a team.
+		1.  Supporting AMPS Team with Payment Presentment Parity Design
+			§ S: The AMPS team needed help designing the insights generation component for the Payment Presentment Parity project.
+			§ T: Although not directly under my scope, I aimed to support them in achieving a scalable and effective solution. My goal was to provide architectural clarity and align all stakeholders around a common solution.
+			§ A: 
+				○ Designed and recommended suitable options for integration, facilitated discussions across teams, and ensured alignment with all key stakeholders including architects, product, and engineering leads.
+				○ Collaborated closely with the AMPS team, guided them through the design process, and shared architectural input to help define a robust solution.
+			§ R: 
+				○ The team was able to successfully design the insights component with improved clarity and alignment, enabling better tracking of payment parity across systems.
+				○  A unified approach was agreed upon, reinforcing the "One PayPal" principle. It enabled smoother cross-team execution and reduced the risk of fragmented implementations.
+		2. Assisting Settlement Team with Monitoring Dashboard
+			§ S: The settlement team was working on a bird’s-eye view dashboard to monitor delivery of settlement reports but lacked visibility into some upstream and downstream components.
+			§ T: Although this wasn’t a part of the DropZone domain, I took the initiative to help them complete the end-to-end design.
+			§ A: Partnered with the settlement team, provided architectural input, and guided them to build a comprehensive monitoring dashboard.
+			§ R: The dashboard enabled real-time visibility across the report delivery lifecycle, contributing to improved monitoring and operational efficiency. It also supported a more seamless end-to-end business flow, strengthening cross-domain collaboration.
+		
+		3. Marathon Debugging for Payment Parity Presentment
+			§ Situation: Payment Parity Presentment was facing critical issues that needed to be resolved to go live in production.
+			§ Task: Debug and fix all issues meticulously over an extended period to ensure the system's readiness for production.
+			§ Action: Collaborated with Saumya and worked tirelessly for 8-9 hours to debug and resolve all blockers, ensuring the system was production-ready.
+			§ Result: Successfully took Payment Parity Presentment live in production, achieving a long-awaited milestone for Jeda. The team's perseverance and tenacity were recognized and appreciated.
+		4. Checkout Simulation Accuracy Improvement
+			§ Situation: The initial checkout simulation accuracy was low, and crucial blockers were hindering progress.
+			§ Task: Increase the simulation accuracy and tackle the blockers to achieve better results.
+			§ Action: 
+				§ Worked persistently to improve the accuracy to 45%, going the extra mile to resolve blockers and guide the team through challenges.
+				§ Collaborated with Saumya and worked tirelessly for 8-9 hours to debug and resolve all blockers, ensuring the system was production-ready.
+			§ Result: Achieved a significant improvement in simulation accuracy, with the effort and problem-solving skills appreciated as a milestone achievement.
+		5. Support During Dropbox Migration
+			§ Situation: Unexpected issues arose during the Dropbox migration process, requiring guidance and resolution.
+			§ Task: Provide constant support and expert guidance to tackle challenges during the migration.
+			§ Action: Remained available on calls, actively involved in development work, and provided calm, focused guidance to resolve issues.
+			§ Result: Successfully completed the migration, with the approach and insights playing a crucial role in overcoming challenges.
+		
+		6. Hyperwallet P1 Issue Mitigation
+			§ Situation: A critical Hyperwallet P1 issue required quick identification of the root cause and mitigation steps.
+			§ Task: Collaborate with the team to resolve the issue effectively.
+			§ Action: Provided expertise and insights, guiding the team through the mitigation process and ensuring effective resolution.
+			§ Result: The issue was resolved successfully, with the collaboration and expertise appreciated.
+		7. Support for Major Initiatives
+			§ Situation: Critical tasks like DropZone NAS Volume migration and Account Migration for BT SFTP required proactive support and expertise.
+			§ Task: Assist in these initiatives to ensure their success and contribute to the team's growth.
+			§ Action: Went above and beyond to provide support, contributing to the success of the initiatives and enhancing the team's technical capabilities.
+			§ Result: The contributions were instrumental in the success of the initiatives and were recognized for their impact on both the products and the team's growth.
+	§ Be the change you seek.
+		1. Encouraging Team to Take Time Off After RTB
+			§ S: The team often hesitated to take compensatory time off after supporting Run-The-Business (RTB) activities over the weekend, leading to burnout.
+			§ T: I wanted to change the culture and encourage people to take appropriate breaks without guilt.
+			§ A: I led by example — after a weekend of RTB support, I took time off and made it visible to the team.
+			§ R: This empowered others to do the same, normalizing time off and promoting a healthier work-life balance across the team.
+		2. Demonstrating and Defining “Definition of Done”
+			§ S: The team lacked a clear and consistent understanding of what "done" meant for a project, leading to inconsistent delivery standards.
+			§ T: I aimed to set a clear definition of done and standardize it across the team.
+			§ A: I worked on a project myself and demonstrated best practices — from documentation to testing to stakeholder communication — then created a "Definition of Done" template for the team.
+			§ R: This led to improved clarity and consistent quality in deliverables, helping set expectations and reducing rework.
+		3.  Introducing Scrum Best Practices and Retrospectives
+			§ S: The team lacked structured ways to reflect on sprint performance or surface internal issues.
+			§ T: I wanted to create a safe space where engineers could share concerns and leaders could act on them.
+			§ A: Introduced Scrum best practices, including regular sprint retrospectives and bi-weekly design reviews involving the entire team.
+			§ R: These sessions enabled better communication, surfaced and addressed blockers, and created a culture of continuous improvement and shared ownership.
